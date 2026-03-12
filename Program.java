@@ -17,6 +17,16 @@ public class Program {
             int[] numbers = Arrays.stream(input.split("\\s+"))
                     .mapToInt(Integer::parseInt)
                     .toArray();
+            // Menu wyboru
+            System.out.println("\nWhat do you want to calculate?");
+            System.out.println("1. Average");
+            System.out.println("2. Maximum");
+            System.out.println("3. Minimum");
+            System.out.print("Choose (1-3): ");
+            int choice = Integer.parseInt(scanner.nextLine());
+
+
+            int choice = Integer.parseInt(scanner.nextLine());
         } catch (NumberFormatException e) {
             System.err.println("ERROR: Please enter valid integers only.");
         } catch (Exception e) {
@@ -24,5 +34,6 @@ public class Program {
         } finally {
             scanner.close();
         }
+
     }
 }
