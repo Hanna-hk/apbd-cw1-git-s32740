@@ -13,3 +13,8 @@ Zadanie ma na celu zapoznanie się z pracą z Gitem.
 Główną różnicą jest to, czy gałąź bazowa (main) „czekała” na zakończenie prac w gałęzi bocznej. Jeśli tak – mamy `fast-forward`. Jeśli w międzyczasie gałąź bazowa również posunęła się naprzód – powstaje `merge commit`.
 ## 2. Czym w praktyce różni się merge od rebase?
 - `Merge` - proces łączenia historii dwóch różnych gałęzi (branchy) w jedną.
+
+__Historia:__ Nieliniowa (widoczne pętle/rozwidlenia). Pokazuje prawdę o tym, kiedy praca była wykonywana równolegle.
+- `Rebase` - proces przenoszenia serii commitów na nową bazę.
+
+__Historia:__ Liniowa (jedna prosta linia). Wygląda, jakby ktoś od początku pracował na najnowszej wersji kodu.
