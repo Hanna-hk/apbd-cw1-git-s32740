@@ -16,6 +16,7 @@ public class Program {
 
             int[] numbers = Arrays.stream(input.split("\\s+"))
                     .mapToInt(Integer::parseInt)
+                    .sorted()
                     .toArray();
             // Menu wyboru
             System.out.println("\nWhat do you want to calculate?");
