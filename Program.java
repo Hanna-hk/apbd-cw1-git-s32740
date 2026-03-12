@@ -50,9 +50,15 @@ public class Program {
         return (double) sum / numbers.length;
     }
     public static int findMax(int[] numbers) {
+        if (numbers == null || numbers.length == 0) {
+            throw new IllegalArgumentException("Array cannot be empty");
+        }
         return Arrays.stream(numbers).max().getAsInt();
     }
     public static int findMin(int[] numbers) {
+        if (numbers == null || numbers.length == 0) {
+            throw new IllegalArgumentException("Array cannot be empty");
+        }
         return Arrays.stream(numbers).min().getAsInt();
     }
 }
