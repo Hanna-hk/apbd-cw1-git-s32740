@@ -23,8 +23,6 @@ public class Program {
             System.out.println("2. Maximum");
             System.out.println("3. Minimum");
             System.out.print("Choose (1-3): ");
-            int choice = Integer.parseInt(scanner.nextLine());
-
 
             int choice = Integer.parseInt(scanner.nextLine());
         } catch (NumberFormatException e) {
