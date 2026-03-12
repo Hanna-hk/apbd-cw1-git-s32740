@@ -41,7 +41,13 @@ public class Program {
 
     }
     public static double calculateAverage(int[] numbers) {
-        return Arrays.stream(numbers).average().orElse(0);
+        if (numbers == null || numbers.length == 0) return 0.0;
+
+        long sum = 0;
+        for (int num : numbers) {
+            sum += num;
+        }
+        return (double) sum / numbers.length;
     }
     public static int findMax(int[] numbers) {
         return Arrays.stream(numbers).max().getAsInt();
