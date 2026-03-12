@@ -67,10 +67,8 @@ public class Program {
             throw new IllegalArgumentException("Array cannot be empty");
         }
         int min = numbers[0];
-        for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] < min) {
-                min = numbers[i];
-            }
+        for (int num : numbers) {
+            min = Math.min(min, num);
         }
         return min;
     }
