@@ -23,8 +23,12 @@ public class Program {
             System.out.println("2. Maximum");
             System.out.println("3. Minimum");
             System.out.print("Choose (1-3): ");
-
             int choice = Integer.parseInt(scanner.nextLine());
+            switch (choice) {
+                case 1 -> System.out.printf("Avg: %.2f%n", Program.calculateAverage(numbers));
+                default -> System.out.println("Error!");
+            }
+
         } catch (NumberFormatException e) {
             System.err.println("ERROR: Please enter valid integers only.");
         } catch (Exception e) {
@@ -33,5 +37,8 @@ public class Program {
             scanner.close();
         }
 
+    }
+    public static double calculateAverage(int[] numbers) {
+        return Arrays.stream(numbers).average().orElse(0);
     }
 }
