@@ -27,6 +27,7 @@ public class Program {
             switch (choice) {
                 case 1 -> System.out.printf("Avg: %.2f%n", Program.calculateAverage(numbers));
                 case 2 -> System.out.println("Max: " + Program.findMax(numbers));
+                case 3 -> System.out.println("Min: " + Program.findMin(numbers));
                 default -> System.out.println("Error!");
             }
 
@@ -44,5 +45,8 @@ public class Program {
     }
     public static int findMax(int[] numbers) {
         return Arrays.stream(numbers).max().getAsInt();
+    }
+    public static int findMin(int[] numbers) {
+        return Arrays.stream(numbers).min().getAsInt();
     }
 }
