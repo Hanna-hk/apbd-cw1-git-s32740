@@ -18,3 +18,39 @@ __Historia:__ Nieliniowa (widoczne pętle/rozwidlenia). Pokazuje prawdę o tym, 
 - `Rebase` - proces przenoszenia serii commitów na nową bazę.
 
 __Historia:__ Liniowa (jedna prosta linia). Wygląda, jakby ktoś od początku pracował na najnowszej wersji kodu.
+## 3. W jaki sposób został rozwiązany konflikt w Twoim repozytorium?
+Commit na branch `feature-conflict`:
+feat: ignore negative numbers during parsing
+
+To była zmiana w wyglądzie tabeli `numbers` :
+```Java
+int[] numbers = Arrays.stream(input.split("\\s+"))
+                    .mapToInt(Integer::parseInt)
+                    .filter(n -> n >= 0) // <<< ZMIANA
+                    .toArray();
+```
+
+Commit na branch `main`:
+feat: sort input numbers for better analysis
+```Java
+int[] numbers = Arrays.stream(input.split("\\s+"))
+                    .mapToInt(Integer::parseInt)
+                    .sorted() // <<< ZMIANA
+                    .toArray();
+```
+Dostałam komunikat:
+```
+Auto-merging Program.java CONFLICT (content): Merge conflict in Program.java Automatic merge failed; fix conflicts and then commit the result.
+```
+### Jak rozwiązałam problem?
+W edytorze kodu zmieniłam tablicę `numbers` tak, aby miała i sortowanie, i filtrowanie, usunięłam znaczniki konfliktu (<<<<<<<, =======, >>>>>>>)
+```Java
+int[] numbers = Arrays.stream(input.split("\\s+"))
+                    .mapToInt(Integer::parseInt)
+                    .sorted() // <<< ZMIANA
+                    .filter(n -> n >= 0) // <<< ZMIANA
+                    .toArray();
+```
+
+## Historia
+![historia_zmian](historia.png)
