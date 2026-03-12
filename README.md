@@ -11,3 +11,5 @@ Zadanie ma na celu zapoznanie się z pracą z Gitem.
 - __Rezultat:__ W historii powstaje charakterystyczne rozgałęzienie i złączenie, które graficznie dokumentuje fakt istnienia bocznej gałęzi.
 ## Podsumowanie:
 Główną różnicą jest to, czy gałąź bazowa (main) „czekała” na zakończenie prac w gałęzi bocznej. Jeśli tak – mamy `fast-forward`. Jeśli w międzyczasie gałąź bazowa również posunęła się naprzód – powstaje `merge commit`.
+## 2. Czym w praktyce różni się merge od rebase?
+- `Merge` - proces łączenia historii dwóch różnych gałęzi (branchy) w jedną.
